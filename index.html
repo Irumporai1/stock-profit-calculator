@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profit-Loss Calculator</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -13,13 +14,32 @@
         <h1>Calculate how much profit or loss you are making on stocks</h1>
         <form id="form">
             <div class="label">Purchase Price of the stock</div>
-            <input type="number" id="purchaseprice">
+            <input type="number" id="purchaseprice" placeholder="stock bought at">
             <div class="label">Total no. of stocks</div>
-            <input type="number" id="noofstocks">
+            <input type="number" id="noofstocks" placeholder="quantity">
             <div class="label">Current Price of the stock</div>
-            <input type="number" id="currentprice">
+            <input type="number" id="currentprice" placeholder="price of the stock now">
             <button id="chk-btn"> Check</button>
     </div>
+    <div class="error">Enter values greater than 0. </div>
+    <div class="output"></div>
+
+    <script src="app.js"></script>
 </body>
+<footer class="footer">
+    <div class="footer-header"></div>
+    <ul class="social-links no-bullet ">
+        <li class="list-inline">
+            <a class="link" href="https://github.com/Irumporai1">Github</a>
+        </li>
+        <li class="link list-inline">
+            <a class="link" href="https://in.linkedin.com/in/irumporai-a-b8364121">LinkedIn</a>
+        </li>
+        <li class="link list-inline">
+            <a class="link" href="https://twitter.com/irumporai_a">Twitter</a>
+        </li>
+    </ul>
+
+</footer>
 
 </html>
