@@ -27,27 +27,30 @@ btn.addEventListener('click', (e) => {
         return;
     }
 
-    if (sp > cp) {
-        let profit = ((sp - cp) * quant).toFixed(2);
+    if (cp > 0 && sp > 0 && quant > 0) {
+        if (sp > cp) {
+            let profit = ((sp - cp) * quant).toFixed(2);
 
-        let percent = ((profit * 100) / cp).toFixed(2);
+            let percent = ((profit * 100) / cp).toFixed(2);
 
-        opt.innerHTML = `<p>You gained ${percent}%.Your total profit is Rs.${profit}</p>`;
-
-
-    }
-    else if (cp > sp) {
-        let loss = ((cp - sp) * quant).toFixed(2);
-
-        let percent = ((loss * 100) / cp).toFixed(2);
-
-        opt.innerHTML = `<p>You lost ${percent}%.Your total loss is Rs.${loss}</p>`;
+            opt.innerHTML = `<p>You gained ${percent}%.Your total profit is Rs.${profit}</p>`;
 
 
+        }
+        else if (cp > sp) {
+            let loss = ((cp - sp) * quant).toFixed(2);
 
+            let percent = ((loss * 100) / cp).toFixed(2);
+
+            opt.innerHTML = `<p>You lost ${percent}%.Your total loss is Rs.${loss}</p>`;
+
+        }
+        else {
+            opt.innerHTML = `No Profit and No Loss`;
+        }
     }
     else {
-        opt.innerText = `No Profit and No Loss`;
+        opt.innerHTML = `Values must be greater than zero`;
     }
 
     opt.style.display = "block";

@@ -14,11 +14,11 @@
         <h1>Calculate how much profit or loss you are making on stocks</h1>
         <form id="form">
             <div class="label">Purchase Price of the stock</div>
-            <input type="number" id="purchaseprice" placeholder="stock bought at">
+            <input type="number" id="purchaseprice" placeholder="stock bought at" min="0" required>
             <div class="label">Total no. of stocks</div>
-            <input type="number" id="noofstocks" placeholder="quantity">
+            <input type="number" id="noofstocks" placeholder="quantity" min="0" required>
             <div class="label">Current Price of the stock</div>
-            <input type="number" id="currentprice" placeholder="price of the stock now">
+            <input type="number" id="currentprice" placeholder="price of the stock now" min="0" required>
             <button id="chk-btn"> Check</button>
     </div>
     <div class="error">Enter values greater than 0. </div>
